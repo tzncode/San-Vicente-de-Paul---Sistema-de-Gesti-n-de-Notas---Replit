@@ -1,0 +1,34 @@
+App Name: San Vicente de Paul - Academic Grade Management System
+
+Core Features:
+
+Professor Login:
+Secure authentication for professors using username and password. Provides access to their assigned courses and subjects, along with a personalized dashboard summarizing recent exams, average grades, and quick access to their teaching materials.
+
+Admin Login:
+Secure login for administrators with elevated permissions. Grants full access to all professor functionalities, plus complete control over academic structure, user accounts, and institutional parameters.
+
+Course & Subject Management:
+Enables administrators to create and organize courses (e.g., 6th Grade, 1st Year High School) and subjects (Mathematics, Social Studies). Professors can view their assigned courses or join new ones using an admin-generated access code, filtered by education level.
+
+Exam Creation:
+Professors can create new exams for each subject, defining attributes such as exam name, optional description, and academic period (Trimestral, Cuatrimestral, Semestral, or Annual — preconfigured by the admin). Each exam is linked to a course and allows grade input for all enrolled students.
+
+Grade Upload & Management:
+Professors can upload and edit grades for students within a 0.00 to 10.00 scale, including decimals. The system supports auto-saving, final submission, and edit restrictions once the academic period closes. Grades can later be exported as PDF or Excel reports.
+
+Academic Period Configuration:
+Admins can define custom academic periods (e.g., Trimestral, Semestral) and set their duration in months. Each period is linked to the evaluation structure of all subjects within the institution.
+
+Student Data Management:
+Admins can upload student information per course (manually or via CSV). Data includes DNI, full name, address, responsible contact, and gender. Each student is automatically associated with the subjects belonging to their course.
+
+User Role Management:
+Create, edit, and deactivate professor accounts. Manage user permissions, recover or reset passwords, and monitor activity. Admins have visibility over all users and their associated academic data.
+
+Dashboard & Reporting:
+Interactive dashboards for both roles:
+
+Professors: Overview of current courses, subjects, and exam performance.
+
+Admins: Global academic summary including number of active courses, professors, and students, plus general performance statistics.

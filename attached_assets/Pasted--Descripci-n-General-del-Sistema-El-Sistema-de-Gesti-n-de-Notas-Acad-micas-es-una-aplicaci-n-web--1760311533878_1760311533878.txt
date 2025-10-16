@@ -1,0 +1,124 @@
+🧭 Descripción General del Sistema
+
+El Sistema de Gestión de Notas Académicas es una aplicación web que permite a los profesores registrar, organizar y cargar las calificaciones de sus alumnos de forma simple y segura, y a los administradores gestionar toda la estructura académica: cursos, materias, usuarios y parámetros institucionales.
+
+El objetivo es centralizar la carga de notas evitando errores humanos, simplificando los procesos administrativos y ofreciendo una vista clara del rendimiento académico por curso, materia y alumno.
+
+👥 Roles del Sistema
+🧑‍🏫 Rol Profesor
+
+Acceso:
+El profesor accede mediante un login con nombre de usuario y contraseña. Cada cuenta está asociada a uno o más cursos y materias.
+
+Pantallas principales:
+
+Inicio (Dashboard del Profesor):
+
+Vista general de los cursos y materias asignadas.
+
+Resumen de los últimos exámenes cargados.
+
+Promedios generales de cada materia (solo lectura).
+
+Gestión de Cursos y Materias:
+
+Lista de cursos y materias en los que el profesor está inscripto.
+
+Posibilidad de unirse a un curso o materia mediante un código de acceso generado por el admin.
+
+Filtros por nivel educativo (Primaria, Secundaria, etc.).
+
+Exámenes y Notas:
+
+Crear nuevos exámenes indicando:
+
+Nombre del examen (p. ej. “Evaluación 1 – Matemática”).
+
+Descripción (opcional).
+
+Periodo académico (Trimestre, Cuatrimestre, Anual).
+
+Cargar notas de los alumnos del curso correspondiente.
+
+Rango: 0.00 a 10.00 (con decimales).
+
+Auto-guardado temporal y botón de "Subir notas" para confirmar.
+
+Posibilidad de editar notas antes del cierre del periodo.
+
+Historial de Exámenes:
+
+Listado de todos los exámenes creados.
+
+Filtro por curso, materia y periodo académico.
+
+Exportar reportes en PDF o Excel (opcional).
+
+🧑‍💼 Rol Administrador
+
+Acceso:
+El administrador accede con credenciales de nivel superior. Posee todas las funcionalidades del rol profesor más permisos de gestión global.
+
+Pantallas principales:
+
+Panel de Control (Dashboard Admin):
+
+Resumen general de cursos, materias, profesores activos, cantidad de alumnos, etc.
+
+Estadísticas globales (promedios, cantidad de notas cargadas, etc.).
+
+Gestión Académica:
+
+Cursos: crear, editar o eliminar cursos (e.g. “6° Grado”, “1° Año Secundaria”).
+
+Materias: crear materias y asociarlas a cursos.
+
+Definir códigos de acceso únicos para que los profesores se sumen.
+
+Asignar profesores a cursos y materias manualmente si es necesario.
+
+Gestión de Usuarios:
+
+Crear, editar y eliminar cuentas de profesores.
+
+Recuperar contraseñas o restablecer cuentas.
+
+Control de acceso (bloquear o desactivar usuarios).
+
+Gestión de Alumnos:
+
+Carga masiva de alumnos por curso (por archivo CSV o manual).
+
+Datos almacenados:
+
+DNI
+
+Nombre completo
+
+Domicilio
+
+Teléfono del responsable
+
+Sexo
+
+Cada alumno queda automáticamente vinculado a las materias de su curso.
+
+Gestión de Parámetros Institucionales:
+
+Definir periodos académicos: trimestral, cuatrimestral, semestral o anual.
+
+Configurar sus fechas de inicio y fin (meses).
+
+Parametrizar límites o escalas de notas (por ejemplo, mínimo aprobatorio).
+
+🧩 Estructura de Organización Académica
+
+Nivel Educativo: Primaria / Secundaria
+
+Curso: Ejemplo: “6° Grado”, “3° Año”
+
+Materia: Ejemplo: “Matemática”, “Ciencias Sociales”, “Lengua”
+
+Profesor: Puede estar asignado a múltiples materias o cursos.
+
+Alumno: Asociado automáticamente a todas las materias del curso.

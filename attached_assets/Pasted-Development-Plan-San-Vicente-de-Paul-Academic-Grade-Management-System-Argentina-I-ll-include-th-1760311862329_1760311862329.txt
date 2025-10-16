@@ -1,0 +1,107 @@
+Development Plan — San Vicente de Paul Academic Grade Management System (Argentina)
+
+I'll include the following features:
+
+Dual Role Authentication System:
+Secure username/password login for both Professors and Administrators, with role-based access control and protected session handling.
+
+Professor Dashboard:
+Displays assigned courses and subjects, recent exams, pending submissions, and average grades per subject. Tailored to the professor’s teaching level (Primary or Secondary).
+
+Administrator Dashboard:
+Overview with global statistics: active courses, subjects, professors, students, and academic performance metrics across the institution.
+
+Course & Subject Management:
+
+Admins can create and organize courses according to the Argentine education system:
+
+Primary Level: 1° to 6° Grado
+
+Secondary Level: 1° to 6° Año
+
+Each course is linked to one or more subjects (e.g., Matemática, Ciencias Sociales, Lengua).
+
+Each subject receives a unique access code for professors to join their corresponding courses.
+
+Professor Enrollment:
+Professors can join courses and subjects via admin-generated access codes, filtered by education level (Primaria / Secundaria).
+Admins may also assign professors manually when necessary.
+
+Exam Creation Interface:
+Professors can create exams within their subjects, defining:
+
+Exam name and optional description
+
+Academic period (Trimestral, Cuatrimestral, Semestral, or Anual)
+
+Associated course and subject
+
+Automatic date of creation and modification tracking
+This ensures each exam is tied to the right course structure and reporting period.
+
+Grade Upload System:
+
+Professors can record student grades on a 0.00–10.00 scale (with decimal support).
+
+Includes auto-save, edit-before-submission, and final submission confirmation.
+
+Grades are automatically linked to each student and exam, ensuring consistent data integrity.
+
+Once the academic period closes, further edits are restricted by the admin.
+
+Student Management:
+Admins can upload student data in bulk (CSV) or manually, with fields including:
+
+DNI, Full Name, Address, Gender
+
+Responsible Contact (Parent/Guardian name and phone number)
+
+Assigned Course (e.g., 3° Año Secundaria)
+Once uploaded, students are automatically associated with all subjects of their course.
+
+Academic Period Configuration:
+Admins can define period types (Trimestral, Cuatrimestral, Semestral, Anual) and set start and end dates in months.
+Each course and subject aligns with these institution-defined academic cycles.
+
+User Management Panel:
+Admins can:
+
+Create, edit, and deactivate professor accounts
+
+Reset or recover passwords
+
+Manage role permissions and access levels
+
+Track login activity for security and auditing
+
+Exam History & Analytics:
+Professors and admins can filter exam history by course, subject, academic period, or professor.
+Includes performance visualization tools for better academic analysis.
+
+Grade Editing Policy:
+Professors can edit grades until the academic period closes.
+After closure, only admins can authorize changes, ensuring institutional control.
+
+Data Consistency Rules:
+
+Each subject must belong to one course.
+
+Each course belongs to one education level (Primary or Secondary).
+
+Each professor can belong to multiple subjects/courses, but only within assigned levels.
+
+Clean, Institutional Design:
+Simple and professional UI with clear navigation for academic workflows.
+Consistent layout for login, dashboards, grade entry, and reports, aligned with typical Argentine school systems.
+
+✅ Notes for Development Consistency
+
+Use “Curso” and “Materia” as base entities — avoid mixing them with “Class” or “Subject” terminology in the codebase.
+
+Define an enum or table for education level (Primaria, Secundaria) and link it directly to courses.
+
+Include DNI as a unique identifier for students (key field).
+
+Define decimal precision (e.g., DECIMAL(4,2)) for grades in the database.
+
+Allow for flexible academic year rollover, so each new cycle can duplicate the existing structure with updated periods.
